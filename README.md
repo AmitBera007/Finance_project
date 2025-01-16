@@ -2,28 +2,12 @@
 
 This project explores predictive hedging strategies using Long Short-Term Memory (LSTM) models for automated trading. By leveraging time-series forecasting and technical indicators, the framework provides actionable BUY, SELL, and HOLD decisions to optimize trading strategies.
 
----
-
-## Table of Contents
-- [Introduction](#introduction)
-- [Data Preprocessing](#data-preprocessing)
-- [Exploratory Data Analysis](#exploratory-data-analysis)
-- [Derived Trading Strategies](#derived-trading-strategies)
-- [Feature Selection](#feature-selection)
-- [LSTM Model Development](#lstm-model-development)
-- [Trading Signal Generation](#trading-signal-generation)
-- [Conclusion and Future Work](#conclusion-and-future-work)
-
----
-
 ## Introduction
 Financial markets exhibit high volatility and non-linear patterns, which traditional methods like ARIMA and GARCH struggle to model effectively. LSTM models, designed to capture these complexities, excel in time-series forecasting.
 
-### Objectives:
+## Objectives:
 1. Accurately forecast stock Close Prices.
 2. Generate robust trading signals (BUY, SELL, HOLD) to inform hedging strategies.
-
----
 
 ## Data Preprocessing
 - **Data Source**: Daily stock data for SBI.
@@ -36,7 +20,6 @@ Financial markets exhibit high volatility and non-linear patterns, which traditi
     - Lagged Close Prices (`lag1`).
     - Day-of-week indicator.
 
----
 
 ## Exploratory Data Analysis
 - Analyzed feature distributions, time-series trends, and autocorrelations.
@@ -46,7 +29,6 @@ Financial markets exhibit high volatility and non-linear patterns, which traditi
   - Moving Averages
   - RSI, Bollinger Bands, and MACD Charts.
 
----
 
 ## Derived Trading Strategies
 ### Key Indicators:
@@ -59,7 +41,6 @@ Financial markets exhibit high volatility and non-linear patterns, which traditi
 ### Combined Strategy:
 By integrating these indicators, we achieve robust trading signals, reducing false positives.
 
----
 
 ## Feature Selection
 ### Methods:
@@ -70,7 +51,6 @@ By integrating these indicators, we achieve robust trading signals, reducing fal
 ### Final Features:
 `lag1 close`, `Lower Bollinger Band`, `rolling mean close`, `High`, `Open`, `Upper Bollinger Band`, `wk close`, `Low`.
 
----
 
 ## LSTM Model Development
 - **Input Sequence Length**: 50 days.
@@ -84,18 +64,15 @@ By integrating these indicators, we achieve robust trading signals, reducing fal
   - MAPE: 11.66%
 - **Output**: Predicted Close Prices.
 
----
 
 ## Trading Signal Generation
-**Logic**:
-$$\text{Change} = \frac{\hat{P}_t - P_{t-1}}{P_{t-1}}$$
+Change = (P̂t - Pt-1) / Pt-1
 
 ### Signals:
 - **BUY**: Change > 1%
 - **SELL**: Change < -1%
 - **HOLD**: Otherwise
 
----
 
 ## Conclusion and Future Work
 - **Achievements**:
