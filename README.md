@@ -88,9 +88,9 @@ By integrating these indicators, we achieve robust trading signals, reducing fal
 
 ## Trading Signal Generation
 **Logic**:
-\[
+$$
 \text{Change} = \frac{\hat{P}_t - P_{t-1}}{P_{t-1}}
-\]
+$$
 
 ### Signals:
 - **BUY**: Change > 1%
@@ -109,16 +109,3 @@ By integrating these indicators, we achieve robust trading signals, reducing fal
   - Develop ensemble models.
   - Deploy in a real-time trading environment.
   - Explore blockchain-based smart contracts for automation.
-
----
-
-## Contributors
-- Sanmitra Sur
-- Amit Bera
-- Subham Roy  
-**Supervisor**: Dr. Gopal Krishna Basak
-
----
-
-## License
-This project is licensed under the MIT License.
