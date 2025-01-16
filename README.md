@@ -88,9 +88,7 @@ By integrating these indicators, we achieve robust trading signals, reducing fal
 
 ## Trading Signal Generation
 **Logic**:
-$$
-\text{Change} = \frac{\hat{P}_t - P_{t-1}}{P_{t-1}}
-$$
+$$\text{Change} = \frac{\hat{P}_t - P_{t-1}}{P_{t-1}}$$
 
 ### Signals:
 - **BUY**: Change > 1%
